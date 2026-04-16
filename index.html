@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インコは正義！ - Parakeet Love</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-color: #fdf6e3;
+            background-image: radial-gradient(#feb2b2 0.5px, #fdf6e3 0.5px);
+            background-size: 10px 10px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bird-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .heart {
+            color: #f87171;
+            display: inline-block;
+            animation: beat 1s infinite alternate;
+        }
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body class="bg-orange-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-orange-500">Parakeet <span class="text-yellow-500">Life</span></div>
+            <ul class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wider">
+                <li><a href="#charm" class="hover:text-orange-500 transition">魅力</a></li>
+                <li><a href="#gallery" class="hover:text-orange-500 transition">写真</a></li>
+                <li><a href="#species" class="hover:text-orange-500 transition">種類</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 hero-pattern overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    世界で一番、<br>
+                    <span class="text-orange-500">あざとい。</span>
+                </h1>
+                <p class="text-lg mb-8 text-gray-600 leading-relaxed">
+                    ふわふわの羽、つぶらな瞳、そして首をかしげるその仕草。<br>
+                    インコとの暮らしは、毎日が「可愛い」の連続です。
+                </p>
+                <a href="#charm" class="bg-orange-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-orange-600 transition-all transform hover:scale-105 inline-block">
+                    その魅力を覗いてみる
+                </a>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 relative">
+                <div class="bird-float relative z-10">
+                    <img src="https://images.unsplash.com/photo-1522858547137-f1dcecff5af3?auto=format&fit=crop&q=80&w=800" 
+                         alt="インコの画像" 
+                         class="rounded-3xl shadow-2xl border-8 border-white"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Cute+Parakeet'">
+                </div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-yellow-300 rounded-full blur-3xl opacity-50"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl opacity-50"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charm Section -->
+    <section id="charm" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 underline decoration-yellow-400 decoration-8 underline-offset-8">
+                インコに恋する4つの理由
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="fade-in text-center p-6 rounded-2xl bg-orange-50 hover:shadow-md transition">
+                    <div class="text-5xl mb-4">👀</div>
+                    <h3 class="text-xl font-bold mb-3">つぶらな瞳</h3>
+                    <p class="text-sm text-gray-600">見つめられるだけで、どんな悩みも吹き飛んでしまいます。</p>
+                </div>
+                <div class="fade-in text-center p-6 rounded-2xl bg-yellow-50 hover:shadow-md transition">
+                    <div class="text-5xl mb-4">👂</div>
+                    <h3 class="text-xl font-bold mb-3">首をかしげる</h3>
+                    <p class="text-sm text-gray-600">不思議そうにこちらを伺う仕草は、まさに「あざと可愛さ」の極み。</p>
+                </div>
+                <div class="fade-in text-center p-6 rounded-2xl bg-green-50 hover:shadow-md transition">
+                    <div class="text-5xl mb-4">🧣</div>
+                    <h3 class="text-xl font-bold mb-3">ふわふわの胸毛</h3>
+                    <p class="text-sm text-gray-600">お餅のように膨らんだ姿は、究極のリラックスタイムです。</p>
+                </div>
+                <div class="fade-in text-center p-6 rounded-2xl bg-blue-50 hover:shadow-md transition">
+                    <div class="text-5xl mb-4">💬</div>
+                    <h3 class="text-xl font-bold mb-3">おしゃべり</h3>
+                    <p class="text-sm text-gray-600">一生懸命、自分の名前や挨拶を真似する姿に感動します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-orange-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-12">
+                <h2 class="text-4xl font-bold">癒やしの瞬間ギャラリー</h2>
+                <p class="text-gray-500 mt-4 md:mt-0 italic">#幸せを運ぶ青い鳥</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30ffd3?auto=format&fit=crop&q=80&w=600" alt="セキセイインコ" class="hover:scale-110 transition duration-500 w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&q=80&w=600" alt="オカメインコ" class="hover:scale-110 transition duration-500 w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1480044965905-02098d419e96?auto=format&fit=crop&q=80&w=600" alt="カラフルなインコ" class="hover:scale-110 transition duration-500 w-full h-64 object-cover">
+                </div>
+                <div class="md:col-span-2 overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544965850-6f8a66788f9b?auto=format&fit=crop&q=80&w=1200" alt="寄り添うインコ" class="hover:scale-110 transition duration-500 w-full h-80 object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1511823794984-b87716139b88?auto=format&fit=crop&q=80&w=600" alt="小さなインコ" class="hover:scale-110 transition duration-500 w-full h-80 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Species Section -->
+    <section id="species" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">代表的な人気者たち</h2>
+            <div class="space-y-12">
+                <!-- Sekisei -->
+                <div class="flex flex-col md:flex-row items-center bg-orange-50 rounded-3xl overflow-hidden shadow-sm p-8 fade-in">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1552728089-57bdde30ffd3?auto=format&fit=crop&q=80&w=400" alt="セキセイインコ" class="rounded-2xl w-full">
+                    </div>
+                    <div class="md:w-2/3 md:pl-12 mt-8 md:mt-0">
+                        <h3 class="text-2xl font-bold text-orange-600 mb-4">セキセイインコ</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            インコ界のアイドル。お喋りが得意な子が多く、性格も陽気で好奇心旺盛です。豊富なカラーバリエーションも魅力の一つ。
+                        </p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-4 py-1 bg-white rounded-full text-xs font-bold border">おしゃべり上手</span>
+                            <span class="px-4 py-1 bg-white rounded-full text-xs font-bold border">フレンドリー</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Okame -->
+                <div class="flex flex-col md:flex-row-reverse items-center bg-yellow-50 rounded-3xl overflow-hidden shadow-sm p-8 fade-in">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&q=80&w=400" alt="オカメインコ" class="rounded-2xl w-full">
+                    </div>
+                    <div class="md:w-2/3 md:pr-12 mt-8 md:mt-0">
+                        <h3 class="text-2xl font-bold text-yellow-600 mb-4">オカメインコ</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            オレンジ色のチークパッチが特徴。実はオウムの仲間です。とても臆病で甘えん坊な性格。冠羽の動きで感情表現をするのがたまらなく可愛いです。
+                        </p>
+                        <div class="mt-6 flex gap-2">
+                            <span class="px-4 py-1 bg-white rounded-full text-xs font-bold border">甘えん坊</span>
+                            <span class="px-4 py-1 bg-white rounded-full text-xs font-bold border">チークが可愛い</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6 italic">インコとの暮らしは、世界を彩る。</h2>
+            <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
+                小さな体に大きな心。彼らは言葉を覚え、感情を共有し、私たちに無償の愛を教えてくれます。インコを愛するすべての人に、幸せな日々が訪れますように。
+            </p>
+            <div class="text-4xl mb-6">🦜 <span class="heart">❤</span></div>
+            <div class="border-t border-gray-800 pt-8 text-sm text-gray-500">
+                &copy; 2024 Parakeet Life Fan Club. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
